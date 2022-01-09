@@ -30,6 +30,7 @@
         }
 
         .col-rowSpan {
+            margin: auto;
             width: 700px;
             height: 300px;
             border: 1px solid blueviolet;
@@ -45,6 +46,31 @@
         }
 
         .col-rowSpan caption {
+            color: brown;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: chartreuse;
+            margin-top: 30px;
+        }
+
+        .accessible-table {
+            width: 500px;
+            height: 300px;
+            border: 1px solid blueviolet;
+            border-collapse: collapse;
+            background-color: burlywood;
+            
+        }
+
+        .accessible-table th, .accessible-table td {
+            border: 1px solid blueviolet;
+            text-align: center;
+            color: blue;
+            padding: 25px;
+        }
+
+        .accessible-table caption {
             color: brown;
             font-size: 30px;
             font-weight: bold;
@@ -142,6 +168,40 @@
                 <td>10000</td>
                 <td>10000</td>
                 <td>10000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="accessible-table">
+        <caption>Accessible Table: </caption>
+
+        <colgroup>
+            <col span="2" style="background-color: gray;">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">CGPA</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <th scope="row">101</th>
+                <td>Anis</td>
+                <td>3.92</td>
+            </tr>
+            <tr>
+                <th scope="row">102</th>
+                <td>Rabeya</td>
+                <td>3.72</td>
+            </tr>
+            <tr>
+                <th scope="row">103</th>
+                <td>Rachel</td>
+                <td>3.52</td>
             </tr>
         </tbody>
     </table>
