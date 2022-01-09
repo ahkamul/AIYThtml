@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {
+        .main-table {
             width: 500px;
             height: 300px;
             border: 1px solid blueviolet;
@@ -15,18 +15,42 @@
             
         }
 
-        th, td {
+        .main-table th, .main-table td {
             border: 1px solid blueviolet;
             text-align: center;
             color: blue;
             padding: 25px;
         }
 
-        caption {
+        .main-table caption {
             color: brown;
             font-size: 30px;
             font-weight: bold;
             padding: 10px;
+        }
+
+        .col-rowSpan {
+            width: 700px;
+            height: 300px;
+            border: 1px solid blueviolet;
+            border-collapse: collapse;
+            background-color: burlywood;
+        }
+
+        .col-rowSpan th, .col-rowSpan td {
+            border: 1px solid blueviolet;
+            text-align: center;
+            color: blue;
+            padding: 25px;
+        }
+
+        .col-rowSpan caption {
+            color: brown;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: chartreuse;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -37,7 +61,7 @@
     
     <p>বাংলাদেশ নিউজিল্যান্ডে প্রথম টেষ্ট ম্যাচ জিতেছে</p>
 
-    <table>
+    <table class="main-table">
         <caption>HTML Table: </caption>
         <thead>
             <tr>
@@ -62,6 +86,62 @@
                 <td>103</td>
                 <td>Rachel</td>
                 <td>3.52</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="col-rowSpan">
+        <caption>Col-Span & Row-Span in Table:</caption>
+        <thead>
+            <tr>
+                <td colspan="2" rowspan="2">Labor</td>
+                <td colspan="3">Monthly Salary</td>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>February</td>
+                <td>March</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="3">Male</td>
+                <td>Abdul Karim</td>
+                <td>5000</td>
+                <td>5000</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Abdul Rahim</td>
+                <td>6000</td>
+                <td>6000</td>
+                <td>6000</td>
+            </tr>
+            <tr>
+                <td>Abdul Sabur</td>
+                <td>7000</td>
+                <td>7000</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Female</td>
+                <td>Karima Khatun</td>
+                <td>8000</td>
+                <td>8000</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <td>Rahima Khatun</td>
+                <td>9000</td>
+                <td>9000</td>
+                <td>9000</td>
+            </tr>
+            <tr>
+                <td>Sabura Khatun</td>
+                <td>10000</td>
+                <td>10000</td>
+                <td>10000</td>
             </tr>
         </tbody>
     </table>
